@@ -144,9 +144,14 @@ class _SigninState extends State<Signin> {
                             fontSize: 12
                           ),),
                           SizedBox(width: 80,),
-                          Text('Forget password?',style: TextStyle(
-                            fontSize: 12
-                          ),),
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/resetpage');
+                            },
+                            child: Text('Forget password?',style: TextStyle(
+                              fontSize: 12
+                            ),),
+                          ),
                         ],
                       )
                     ),
@@ -216,4 +221,3 @@ class _SigninState extends State<Signin> {
   }
 }
 
-  
